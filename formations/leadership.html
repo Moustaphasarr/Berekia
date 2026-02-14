@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership - M3K</title>
+    <link rel="stylesheet" href="../formation.css">
+    <link rel="stylesheet" href="formation-detail.css">
+    <link rel="stylesheet" href="../payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.jpeg" alt="M3K Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <a href="../accueil.html" class="nav-link">Accueil</a>
+                <a href="../apropos.html" class="nav-link">A propos</a>
+                <a href="../Formation.html" class="nav-link active">Formations & Accompagnements</a>
+                <a href="../realisation.html" class="nav-link">Réalisations</a>
+                <a href="../doc&tarifs.html" class="nav-link">Documents & Tarifs</a>
+                <a href="../contact&faq.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="detail-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <a href="../Formation.html" class="back-link">← Retour aux formations</a>
+            <h1 class="formation-title">Leadership</h1>
+            <p class="formation-tagline">Devenez un leader inspirant, capable de fédérer les équipes et de guider le
+                changement.</p>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview-section">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="overview-icon">⏱️</div>
+                    <h3>Durée</h3>
+                    <p>3 jours</p>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">👥</div>
+                    <h3>Format</h3>
+                    <p>Séminaire / Atelier</p>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">🎓</div>
+                    <h3>Niveau</h3>
+                    <p>Intermédiaire / Avancé</p>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">📜</div>
+                    <h3>Certification</h3>
+                    <p>Certificat de Leadership</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="description-section">
+        <div class="container">
+            <h2 class="section-title">À propos de cette formation</h2>
+            <div class="description-content">
+                <p>Le leadership ne se décrète pas, il se construit. Cette formation s'adresse aux managers, chefs de
+                    projet et toute personne souhaitant développer son influence positive et sa capacité à diriger.</p>
+                <p>Vous apprendrez les différents styles de leadership, comment motiver vos collaborateurs, gérer les
+                    conflits avec diplomatie et prendre des décisions stratégiques en période d'incertitude.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="learning-section">
+        <div class="container">
+            <h2 class="section-title">Ce que vous allez apprendre</h2>
+            <div class="learning-grid">
+                <div class="learning-item">
+                    <div class="learning-number">01</div>
+                    <h3>Module à définir</h3>
+                    <p>Description du premier module de formation</p>
+                </div>
+                <div class="learning-item">
+                    <div class="learning-number">02</div>
+                    <h3>Module à définir</h3>
+                    <p>Description du deuxième module de formation</p>
+                </div>
+                <div class="learning-item">
+                    <div class="learning-number">03</div>
+                    <h3>Module à définir</h3>
+                    <p>Description du troisième module de formation</p>
+                </div>
+                <div class="learning-item">
+                    <div class="learning-number">04</div>
+                    <h3>Module à définir</h3>
+                    <p>Description du quatrième module de formation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="documents-section">
+        <div class="container">
+            <h2 class="section-title">Documents & Ressources</h2>
+            <p class="section-subtitle">Outils pratiques pour le management et le leadership.</p>
+
+            <div class="documents-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
+
+                <!-- Free Document -->
+                <div class="doc-card-enhanced">
+                    <div class="doc-badge badge-free">Gratuit</div>
+                    <div class="doc-icon">📄</div>
+                    <h3 class="doc-title">Plan de cours</h3>
+                    <p class="doc-desc">Structure détaillée du séminaire Leadership.</p>
+                    <a href="#" class="btn-action btn-download"
+                        onclick="alert('Téléchargement du PDF lancé !')">Télécharger</a>
+                </div>
+
+                <!-- Paid Document -->
+                <div class="doc-card-enhanced">
+                    <div class="doc-badge badge-paid">7 000 FCFA</div>
+                    <div class="doc-icon">📘</div>
+                    <h3 class="doc-title">Guide du Manager</h3>
+                    <p class="doc-desc">Kit complet : Grilles d'entretien, gestion de conflit, motivation.</p>
+                    <button class="btn-action btn-purchase"
+                        onclick="openPaymentModal('Guide du Manager', '7 000 FCFA')">Acheter</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Intéressé par cette formation ?</h2>
+            <p>Contactez-nous pour plus d'informations ou pour réserver votre place</p>
+            <a href="../contact&faq.html" class="cta-button">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>Mahoussé Bérékia KOUDAWA</h3>
+                <p>Formateur & Coach en Soft Skills</p>
+                <p>Je vous aide avec respect et vous souhaite présent(e)</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="../accueil.html">Accueil</a></li>
+                    <li><a href="../apropos.html">A propos</a></li>
+                    <li><a href="../Formation.html">Formations</a></li>
+                    <li><a href="../realisation.html">Réalisations</a></li>
+                    <li><a href="../contact&faq.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Formations</h4>
+                <ul>
+                    <li><a href="prise-parole.html">Prise de parole en public</a></li>
+                    <li><a href="developpement-personnel.html">Développement personnel</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="gestion-stress.html">Gestion du stress</a></li>
+                    <li><a href="sante-mentale.html">Santé mentale</a></li>
+                    <li><a href="sport.html">Sport & coaching</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📞 +221 77 563 48 87</li>
+                    <li>✉️ contact@m3k.com</li>
+                    <li>📍 Sénégal</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Mak and Sérénité</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../payment.js"></script>
+</body>
+
+</html>

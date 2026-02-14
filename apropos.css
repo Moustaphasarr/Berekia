@@ -1,0 +1,699 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a9ba8;
+    --secondary-color: #e74c3c;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: var(--bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+/* Page Title overridden for About page structure */
+.about-hero-wrapper {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.about-hero-bg {
+    background-color: #1a9ba8;
+    height: 250px;
+    padding-top: 60px;
+}
+
+.about-hero-bg .page-title {
+    color: var(--white);
+    text-align: left;
+    margin: 0;
+    font-size: 42px;
+}
+
+.about-intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -60px;
+    /* Pull image up */
+}
+
+.intro-text {
+    width: 50%;
+    padding-top: 100px;
+    /* Space to clear the blue bg visual alignment if needed, or adjust */
+}
+
+.intro-role {
+    font-size: 24px;
+    color: #1a9ba8;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.intro-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+.intro-image {
+    width: 45%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-top: -80px;
+    /* Pull image up to overlap header */
+}
+
+.intro-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Parcours (Timeline) Section */
+.parcours-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.uppercase-title,
+.section-title {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 28px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline-tree {
+    position: relative;
+}
+
+.timeline-row {
+    display: flex;
+    justify-content: space-around;
+    min-height: 120px;
+}
+
+.timeline-card {
+    background-color: #7CC5CD;
+    /* Light teal */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-card h4 {
+    font-size: 12px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.timeline-card p {
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+.t-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Connecting lines styling - simplified approach for responsive grid */
+.timeline-line-container {
+    position: relative;
+    height: 60px;
+    margin: 20px 0;
+}
+
+.main-line {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #1a9ba8;
+}
+
+.year-marker {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -160%);
+    color: #1a9ba8;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Dotted lines connecting cards to main line would be complex with just CSS, 
+   CSS pseudo elements on cards can create visual connectors */
+.timeline-card::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-image: linear-gradient(to bottom, #1a9ba8 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: right;
+    background-size: 2px 10px;
+    background-repeat: repeat-y;
+    left: 50%;
+}
+
+.timeline-row.top .timeline-card::after {
+    bottom: -35px;
+    /* Connect downwards */
+}
+
+/* Doctorat Section Styling */
+.doctorat-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 80px;
+    /* Space from bottom timeline row */
+    font-weight: 700;
+    color: #2c3e50;
+    padding-bottom: 40px;
+}
+
+.doc-year {
+    color: #2c3e50;
+    font-size: 16px;
+    margin-bottom: -5px;
+    /* Align with line */
+}
+
+.doc-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.doc-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.doc-line {
+    width: 60px;
+    height: 3px;
+    background-color: #1a9ba8;
+}
+
+.doc-status {
+    font-weight: 700;
+    font-size: 16px;
+    color: #2c3e50;
+    /* Black text */
+    margin-bottom: -5px;
+    /* Align with line */
+}
+
+.timeline-row.bottom .timeline-card::after {
+    top: -35px;
+    /* Connect upwards */
+}
+
+/* Distinctions Section */
+.distinctions-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.distinctions-box {
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.box-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.distinctions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.distinction-card {
+    border: 1px solid #eee;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.distinction-card.full-width {
+    grid-column: span 2;
+}
+
+.distinction-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.d-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.blue-bg {
+    background-color: #E0F7FA;
+    color: #00BCD4;
+}
+
+.yellow-bg {
+    background-color: #FFF8E1;
+    color: #FFC107;
+}
+
+.d-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.d-date {
+    font-size: 12px;
+    color: #1a9ba8;
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.d-info p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Competences Section */
+.competences-section {
+    padding: 60px 0;
+    background-color: #F8F9FA;
+}
+
+.competences-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.competence-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.c-icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #E0F2F1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.c-icon {
+    font-size: 28px;
+    color: #1a9ba8;
+}
+
+.c-content h4 {
+    font-size: 16px;
+    color: #1a9ba8;
+    margin-bottom: 5px;
+}
+
+.c-content p {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Interests Section */
+.interests-section {
+    padding: 60px 0 100px;
+    text-align: center;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.interest-card {
+    text-align: center;
+}
+
+.interest-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.interest-card h3 {
+    color: #1a9ba8;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Responsive specific to About Page */
+@media (max-width: 768px) {
+    .about-intro-container {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .intro-text {
+        width: 100%;
+        padding-top: 20px;
+        order: 2;
+    }
+
+    .intro-image {
+        width: 100%;
+        margin-top: -30px;
+        order: 1;
+    }
+
+    .distinctions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .distinction-card.full-width {
+        grid-column: auto;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        overflow-x: auto;
+    }
+
+    .timeline-tree {
+        min-width: 600px;
+        /* Force scrolling on small screens */
+    }
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.footer-section ul li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .formations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .formations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* menu */
+.menu_burger {
+    width: 35px;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu_burger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: black;
+    margin: 12px 0;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+/* Animation croix parfaite */
+.menu_burger.active span:nth-child(1) {
+    transform: translateY(16px) rotate(45deg);
+}
+
+.menu_burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu_burger.active span:nth-child(3) {
+    transform: translateY(-16px) rotate(-45deg);
+}
+/*  */
+
+/* Responsive */
+.menu_burger{
+    display: none;
+}
+.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+@media screen  and (max-width: 1025px) {
+    
+    .menu_burger{
+        display: block;
+        width: 60px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.52);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .container{
+        padding: 0;
+    }
+    nav a{
+       margin: 20px 0;
+       font-size: 1.2em;
+    }
+    .mobile-menu{
+    margin-left: 0;
+    }
+}

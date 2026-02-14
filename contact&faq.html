@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & FAQ - M3K</title>
+    <link rel="stylesheet" href="contact&faq.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="menu.js" defer></script>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="M3K Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <a href="accueil.html" class="nav-link">Accueil</a>
+                <a href="apropos.html" class="nav-link">A propos</a>
+                <a href="Formation.html" class="nav-link">Formations & Accompagnements</a>
+                <a href="realisation.html" class="nav-link">Réalisations</a>
+                <a href="doc&tarifs.html" class="nav-link">Documents & Tarifs</a>
+                <a href="contact&faq.html" class="nav-link active">Contact</a>
+            </nav>
+            <div class="menu_burger">
+                <span class="burger_line"></span>
+                <span class="burger_line"></span>
+                <span class="burger_line"></span>
+             </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h1 class="page-title">Contactez-nous</h1>
+
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Envoyez-nous un message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="formation">Demande de formation</option>
+                                <option value="coaching">Coaching individuel</option>
+                                <option value="entreprise">Formation en entreprise</option>
+                                <option value="info">Demande d'information</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Informations de contact</h2>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>Téléphone</h3>
+                            <p>+221 77 563 48 87</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>contact@m3k.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Localisation</h3>
+                            <p>Sénégal</p>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/mahousseberekia" target="_blank" aria-label="Facebook"
+                                class="social-link">
+                                <span>📘</span>
+                            </a>
+                            <a href="https://wa.me/221775634887" target="_blank" aria-label="WhatsApp"
+                                class="social-link">
+                                <span>💬</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mahousseberekia" target="_blank" aria-label="LinkedIn"
+                                class="social-link">
+                                <span>💼</span>
+                            </a>
+                            <a href="https://www.instagram.com/mahousseberekia" target="_blank" aria-label="Instagram"
+                                class="social-link">
+                                <span>📷</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Questions Fréquentes (FAQ)</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quels types de formations proposez-vous ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nous proposons des formations en prise de parole en public, développement personnel,
+                            leadership, gestion du stress et des émotions, gestion du temps, accompagnement en santé
+                            mentale et coaching sportif. Toutes nos formations sont adaptables en présentiel, en ligne
+                            ou en format hybride.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Les formations sont-elles disponibles en ligne ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, toutes nos formations peuvent être dispensées en ligne via des plateformes de
+                            visioconférence. Nous proposons également des formats hybrides combinant sessions en ligne
+                            et en présentiel selon vos besoins.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quelle est la durée moyenne d'une formation ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La durée varie selon le type de formation et vos objectifs. Les formations peuvent aller
+                            d'une demi-journée à plusieurs semaines. Nous personnalisons chaque programme pour répondre
+                            à vos besoins spécifiques.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Proposez-vous des formations en entreprise ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolument ! Nous intervenons régulièrement en entreprise pour des formations sur mesure
+                            adaptées à vos équipes. Nous pouvons nous déplacer dans vos locaux ou organiser des sessions
+                            dans un lieu de votre choix.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment puis-je m'inscrire à une formation ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Vous pouvez nous contacter via le formulaire ci-dessus, par téléphone au +221 77 563 48 87,
+                            ou par email à contact@m3k.com. Nous vous répondrons dans les plus brefs délais pour
+                            discuter de vos besoins et planifier votre formation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Délivrez-vous des certificats à la fin des formations ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, tous les participants qui complètent une formation reçoivent un certificat de
+                            participation. Pour certaines formations spécifiques, nous délivrons également des
+                            attestations de compétences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>Mahouss� Bérékia KOUDAWA</h3>
+                <p>Formateur & Coach en Soft Skills</p>
+                <p>Je vous aide avec respect et vous souhaite présent(e)</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="apropos.html">A propos</a></li>
+                    <li><a href="Formation.html">Formations</a></li>
+                    <li><a href="realisation.html">Réalisations</a></li>
+                    <li><a href="contact&faq.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Formations</h4>
+                <ul>
+                    <li><a href="Formation.html#prise-parole">Prise de parole en public</a></li>
+                    <li><a href="Formation.html#developpement">Développement personnel</a></li>
+                    <li><a href="Formation.html#leadership">Leadership</a></li>
+                    <li><a href="Formation.html#gestion-stress">Gestion du stress</a></li>
+                    <li><a href="Formation.html#sante-mentale">Santé mentale</a></li>
+                    <li><a href="Formation.html#sport">Sport & coaching</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📞 +221 77 563 48 87</li>
+                    <li>✉️ contact@m3k.com</li>
+                    <li>📍 Sénégal</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/mahousseberekia" target="_blank" aria-label="Facebook">📘</a>
+                    <a href="https://wa.me/221775634887" target="_blank" aria-label="WhatsApp">💬</a>
+                    <a href="https://www.linkedin.com/in/mahousseberekia" target="_blank" aria-label="LinkedIn">💼</a>
+                    <a href="https://www.instagram.com/mahousseberekia" target="_blank" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Mak and Sérénité</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+            e.target.reset();
+        });
+    </script>
+</body>
+
+</html>

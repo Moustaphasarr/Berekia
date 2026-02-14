@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents & Tarifs - M3K</title>
+    <link rel="stylesheet" href="doc&tarifs.css">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="menu.js" defer></script>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="M3K Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <a href="accueil.html" class="nav-link">Accueil</a>
+                <a href="apropos.html" class="nav-link">A propos</a>
+                <a href="Formation.html" class="nav-link">Formations & Accompagnements</a>
+                <a href="realisation.html" class="nav-link">Réalisations</a>
+                <a href="doc&tarifs.html" class="nav-link active">Documents & Tarifs</a>
+                <a href="contact&faq.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="menu_burger">
+                <span class="burger_line"></span>
+                <span class="burger_line"></span>
+                <span class="burger_line"></span>
+             </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="docs-hero">
+        <div class="container">
+            <h1 class="page-title">Documents & Tarifs</h1>
+            <p class="page-subtitle">Téléchargez nos documents et consultez nos tarifs</p>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="documents-section">
+        <div class="container">
+            <h2 class="section-title">Documents à Télécharger</h2>
+            <p class="section-subtitle">Retrouvez ici toutes les ressources gratuites et payantes de nos formations.</p>
+
+            <div class="documents-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+
+                <!-- General Documents (Free) -->
+                <div class="doc-card-enhanced">
+                    <div class="doc-badge badge-free">Gratuit</div>
+                    <div class="doc-icon">📄</div>
+                    <h3 class="doc-title">Catalogue de Formations</h3>
+                    <p class="doc-desc">Découvrez l'ensemble de nos formations et accompagnements disponibles.</p>
+                    <a href="#" class="btn-action btn-download"
+                        onclick="alert('Téléchargement du PDF lancé !')">Télécharger</a>
+                </div>
+
+                <div class="doc-card-enhanced">
+                    <div class="doc-badge badge-free">Gratuit</div>
+                    <div class="doc-icon">📋</div>
+                    <h3 class="doc-title">Fiche d'Inscription</h3>
+                    <p class="doc-desc">Formulaire d'inscription pour nos formations et programmes de coaching.</p>
+                    <a href="#" class="btn-action btn-download"
+                        onclick="alert('Téléchargement du PDF lancé !')">Télécharger</a>
+                </div>
+
+                <!-- Prise de Parole (Paid/Free) -->
+                <div class="doc-card-enhanced">
+                    <div class="doc-badge badge-free">Gratuit</div>
+                    <div class="doc-icon">🎤</div>
+                    <h3 class="doc-title">Prise de Parole (Syllabus)</h3>
+                    <p class="doc-desc">Le programme détaillé de la formation "Prise de parole en public".</p>
+                    <a href="#" class="btn-action btn-download"
+                        onclick="alert('Téléchargement du PDF lancé !')">Télécharger</a>
+                </div>
+
+                <div class="doc-card-enhanced">
+                    <div class="doc-badge badge-paid">5 000 FCFA</div>
+                    <div class="doc-icon">📘</div>
+                    <h3 class="doc-title">Guide : Gérer son trac</h3>
+                    <p class="doc-desc">E-book complet avec exercices pratiques et techniques de respiration.</p>
+                    <button class="btn-action btn-purchase"
+                        onclick="openPaymentModal('Guide Pratique : Gérer son trac', '5 000 FCFA')">Acheter</button>
+                </div>
+
+                <div class="doc-card-enhanced">
+                    <div class="doc-badge badge-paid">10 000 FCFA</div>
+                    <div class="doc-icon">🎥</div>
+                    <h3 class="doc-title">Masterclass Art Oratoire</h3>
+                    <p class="doc-desc">Accès à 2h de vidéo exclusive sur les techniques d'art oratoire.</p>
+                    <button class="btn-action btn-purchase"
+                        onclick="openPaymentModal('Masterclass Vidéo - Art Oratoire', '10 000 FCFA')">Acheter</button>
+                </div>
+
+                <!-- Other General -->
+                <div class="doc-card-enhanced">
+                    <div class="doc-badge badge-free">Gratuit</div>
+                    <div class="doc-icon">✅</div>
+                    <h3 class="doc-title">Conditions Générales</h3>
+                    <p class="doc-desc">Conditions générales de vente et modalités de nos prestations.</p>
+                    <a href="#" class="btn-action btn-download"
+                        onclick="alert('Téléchargement du PDF lancé !')">Télécharger</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Nos Tarifs</h2>
+            <p class="section-subtitle">Des formules adaptées à vos besoins et votre budget</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Formation Individuelle</h3>
+                        <div class="price">Sur devis</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Accompagnement personnalisé</li>
+                        <li>✓ Horaires flexibles</li>
+                        <li>✓ Programme sur mesure</li>
+                        <li>✓ Suivi individuel</li>
+                        <li>✓ Certificat de formation</li>
+                    </ul>
+                    <a href="contact&faq.html" class="btn btn-primary">Demander un devis</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="badge">Populaire</div>
+                    <div class="pricing-header">
+                        <h3>Formation en Groupe</h3>
+                        <div class="price">Sur devis</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Groupes de 5 à 15 personnes</li>
+                        <li>✓ Dynamique de groupe</li>
+                        <li>✓ Exercices pratiques</li>
+                        <li>✓ Support de cours inclus</li>
+                        <li>✓ Certificat de formation</li>
+                        <li>✓ Tarif préférentiel</li>
+                    </ul>
+                    <a href="contact&faq.html" class="btn btn-primary">Demander un devis</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Formation en Entreprise</h3>
+                        <div class="price">Sur devis</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Programme personnalisé</li>
+                        <li>✓ Intervention sur site</li>
+                        <li>✓ Adaptation à votre secteur</li>
+                        <li>✓ Suivi post-formation</li>
+                        <li>✓ Rapports d'évaluation</li>
+                    </ul>
+                    <a href="contact&faq.html" class="btn btn-primary">Demander un devis</a>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p><strong>Note :</strong> Les tarifs varient selon la durée, le type de formation et le nombre de
+                    participants. Contactez-nous pour obtenir un devis personnalisé adapté à vos besoins spécifiques.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section class="payment-section">
+        <div class="container">
+            <h2 class="section-title">Modalités de Paiement</h2>
+
+            <div class="payment-info">
+                <div class="payment-item">
+                    <div class="payment-icon">💳</div>
+                    <h3>Paiement flexible</h3>
+                    <p>Possibilité de paiement en plusieurs fois pour les formations longue durée</p>
+                </div>
+
+                <div class="payment-item">
+                    <div class="payment-icon">🏦</div>
+                    <h3>Virement bancaire</h3>
+                    <p>Paiement par virement bancaire accepté pour les entreprises</p>
+                </div>
+
+                <div class="payment-item">
+                    <div class="payment-icon">📱</div>
+                    <h3>Mobile Money</h3>
+                    <p>Paiement via Orange Money, Wave et autres services mobiles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <h3>Mahoussé Bérékia KOUDAWA</h3>
+                <p>Formateur & Coach en Soft Skills</p>
+                <p>Je vous aide avec respect et vous souhaite présent(e)</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="apropos.html">A propos</a></li>
+                    <li><a href="Formation.html">Formations</a></li>
+                    <li><a href="realisation.html">Réalisations</a></li>
+                    <li><a href="contact&faq.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Formations</h4>
+                <ul>
+                    <li><a href="Formation.html#prise-parole">Prise de parole en public</a></li>
+                    <li><a href="Formation.html#developpement">Développement personnel</a></li>
+                    <li><a href="Formation.html#leadership">Leadership</a></li>
+                    <li><a href="Formation.html#gestion-stress">Gestion du stress</a></li>
+                    <li><a href="Formation.html#sante-mentale">Santé mentale</a></li>
+                    <li><a href="Formation.html#sport">Sport & coaching</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📞 +221 77 563 48 87</li>
+                    <li>✉️ contact@m3k.com</li>
+                    <li>📍 Sénégal</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Mak and Sérénité</p>
+        </div>
+    </footer>
+
+    <script src="payment.js"></script>
+</body>
+
+</html>
