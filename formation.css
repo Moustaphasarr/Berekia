@@ -561,9 +561,28 @@ body {
     }
 
     .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;   /* centre les blocs */
     }
+
+.footer-section {
+    
+    max-width: 400px;        /* largeur contrôlée */
+    text-align: left;        /* texte aligné à gauche */
+}
+
+.footer-section ul {
+    padding: 0;
+}
+
+.social-icons {
+    justify-content: flex-start; /* icônes alignées à gauche */
+}
+
+.logo-img {
+    height: 50px;
+}
 }
 
 /* menu */
@@ -571,6 +590,7 @@ body {
     width: 35px;
     cursor: pointer;
     position: relative;
+    display: none;
 }
 
 .menu_burger span {
@@ -578,14 +598,14 @@ body {
     height: 4px;
     width: 100%;
     background: black;
-    margin: 12px 0;
+    margin: 8px 0;
     border-radius: 2px;
     transition: all 0.4s ease;
 }
 
 /* Animation croix parfaite */
 .menu_burger.active span:nth-child(1) {
-    transform: translateY(16px) rotate(45deg);
+    transform: translateY(14px) rotate(45deg);
 }
 
 .menu_burger.active span:nth-child(2) {
@@ -593,14 +613,12 @@ body {
 }
 
 .menu_burger.active span:nth-child(3) {
-    transform: translateY(-16px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
 }
 /*  */
 
 /* Responsive */
-.menu_burger{
-    display: none;
-}
+
 .no-scroll {
     overflow: hidden;
     position: fixed;
@@ -608,12 +626,12 @@ body {
 }
 @media screen  and (max-width: 1025px) {
     
-    .menu_burger{
+   .menu_burger {
         display: block;
-        width: 60px;
+        width: 45px;
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: auto;
+        right: 11px;
     }
     .nav{
         position: absolute;
@@ -622,7 +640,7 @@ body {
         right: 0;
         display: flex;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.52);
+        background-color: rgba(255, 255, 255, 0.80);
         backdrop-filter: blur(7px);
         width: 100%;
         height: 100vh;
@@ -641,4 +659,7 @@ body {
     .mobile-menu{
     margin-left: 0;
     }
+    .logo-img {
+    height: 50px;
+}
 }
