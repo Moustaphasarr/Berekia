@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <script src="menu.js" defer></script>
+    <script src="realisation.js" defer></script>
+    <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
 </head>
 
 <body>
@@ -51,11 +53,13 @@
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
+                    <div class="testimonial-rating" aria-label="Note 5 sur 5">★★★★★</div>
                     <div class="testimonial-content">
                         <p>"Une formation exceptionnelle qui m'a permis de développer ma confiance en moi et mes
                             compétences en prise de parole. Mahouss� est un formateur passionné et à l'écoute."</p>
                     </div>
                     <div class="testimonial-author">
+                        <img src="images/image_berikia.png" alt="Photo de Aminata Diallo" class="author-avatar">
                         <div class="author-info">
                             <h4>Aminata Diallo</h4>
                             <p>Responsable Communication</p>
@@ -64,11 +68,13 @@
                 </div>
 
                 <div class="testimonial-card">
+                    <div class="testimonial-rating" aria-label="Note 5 sur 5">★★★★★</div>
                     <div class="testimonial-content">
                         <p>"Le coaching en leadership a transformé ma manière de gérer mon équipe. Des outils concrets
                             et une approche personnalisée qui font vraiment la différence."</p>
                     </div>
                     <div class="testimonial-author">
+                        <img src="images/image_berikia2.png" alt="Photo de Moussa Sow" class="author-avatar">
                         <div class="author-info">
                             <h4>Moussa Sow</h4>
                             <p>Manager d'équipe</p>
@@ -77,11 +83,13 @@
                 </div>
 
                 <div class="testimonial-card">
+                    <div class="testimonial-rating" aria-label="Note 5 sur 5">★★★★★</div>
                     <div class="testimonial-content">
                         <p>"Grâce à la formation en gestion du stress, j'ai appris à mieux gérer mes émotions et à
                             retrouver un équilibre dans ma vie professionnelle et personnelle."</p>
                     </div>
                     <div class="testimonial-author">
+                        <img src="images/mahousse-mic.jpg" alt="Photo de Fatou Ndiaye" class="author-avatar">
                         <div class="author-info">
                             <h4>Fatou Ndiaye</h4>
                             <p>Entrepreneure</p>
@@ -100,7 +108,12 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/projet-1.jpg" alt="Formation en entreprise">
+                        <div class="project-gallery">
+                            <img src="images/projet-1.jpg" alt="Formation leadership en entreprise photo 1">
+                            <img src="images/leadership.jpg" alt="Formation leadership en entreprise photo 2">
+                            <img src="images/prise-parole.jpg" alt="Formation leadership en entreprise photo 3">
+                            <img src="images/projet-2.jpg" alt="Formation leadership en entreprise photo 4">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Formation Leadership en Entreprise</h3>
@@ -115,7 +128,12 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/projet-2.jpg" alt="Atelier prise de parole">
+                        <div class="project-gallery">
+                            <img src="images/projet-2.jpg" alt="Atelier prise de parole photo 1">
+                            <img src="images/prise-parole.jpg" alt="Atelier prise de parole photo 2">
+                            <img src="images/debat.jpg" alt="Atelier prise de parole photo 3">
+                            <img src="images/projet-1.jpg" alt="Atelier prise de parole photo 4">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Atelier Prise de Parole en Public</h3>
@@ -130,7 +148,12 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/projet-3.jpg" alt="Coaching individuel">
+                        <div class="project-gallery">
+                            <img src="images/projet-3.jpg" alt="Coaching individuel photo 1">
+                            <img src="images/developpement-personnel.jpg" alt="Coaching individuel photo 2">
+                            <img src="images/sante-mentale.jpg" alt="Coaching individuel photo 3">
+                            <img src="images/image27.jpeg" alt="Coaching individuel photo 4">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Programme de Coaching Individuel</h3>
@@ -145,7 +168,12 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/projet-4.jpg" alt="Formation gestion du temps">
+                        <div class="project-gallery">
+                            <img src="images/projet-4.jpg" alt="Formation gestion du temps photo 1">
+                            <img src="images/gestion-temps.jpg" alt="Formation gestion du temps photo 2">
+                            <img src="images/gestion-stress.jpg" alt="Formation gestion du temps photo 3">
+                            <img src="images/projet-3.jpg" alt="Formation gestion du temps photo 4">
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Formation Gestion du Temps</h3>
@@ -188,11 +216,16 @@
         </div>
     </section>
 
+    <div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+        <button type="button" class="lightbox-close" aria-label="Fermer">&times;</button>
+        <img id="lightbox-image" class="lightbox-image" src="" alt="">
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-section">
-                <h3>Mahouss� Bérékia KOUDAWA</h3>
+                <h3>Mahousse Bérékia KOUDAWA</h3>
                 <p>Formateur & Coach en Soft Skills</p>
                 <p>Je vous aide avec respect et vous souhaite présent(e)</p>
             </div>

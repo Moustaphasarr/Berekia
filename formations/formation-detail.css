@@ -37,18 +37,30 @@
 .back-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: var(--white);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 15px;
     margin-bottom: 30px;
-    transition: all 0.3s;
-    opacity: 0.9;
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(6px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    opacity: 1;
 }
 
 .back-link:hover {
-    opacity: 1;
-    transform: translateX(-5px);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+}
+
+.back-link:active {
+    transform: translateY(0);
 }
 
 .formation-title {
@@ -278,5 +290,269 @@
 
     .cta-section h2 {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .detail-hero {
+        padding: 96px 0 60px;
+    }
+
+    .formation-title {
+        font-size: 40px;
+    }
+
+    .formation-tagline {
+        font-size: 17px;
+        max-width: 620px;
+    }
+
+    .overview-section,
+    .description-section,
+    .learning-section,
+    .documents-section,
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 30px;
+        margin-bottom: 34px;
+    }
+
+    .overview-card {
+        padding: 24px 16px;
+    }
+
+    .overview-icon {
+        font-size: 38px;
+    }
+
+    .overview-card h3 {
+        font-size: 16px;
+    }
+
+    .overview-card p {
+        font-size: 14px;
+    }
+
+    .description-content {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .learning-grid {
+        gap: 22px;
+        margin-top: 30px;
+    }
+
+    .learning-item {
+        padding: 22px;
+    }
+
+    .learning-number {
+        font-size: 38px;
+        top: 14px;
+        right: 18px;
+    }
+
+    .learning-item h3 {
+        font-size: 18px;
+    }
+
+    .learning-item p {
+        font-size: 14px;
+    }
+
+    .documents-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 18px !important;
+        margin-top: 28px !important;
+    }
+
+    .section-subtitle {
+        font-size: 15px;
+        margin-bottom: 26px;
+    }
+
+    .cta-section h2 {
+        font-size: 30px;
+    }
+
+    .cta-section p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-hero {
+        padding: 84px 0 46px;
+    }
+
+    .back-link {
+        font-size: 12px;
+        margin-bottom: 16px;
+        padding: 7px 12px;
+    }
+
+    .formation-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .formation-tagline {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .overview-section,
+    .description-section,
+    .learning-section,
+    .documents-section,
+    .cta-section {
+        padding: 42px 0;
+    }
+
+    .overview-section {
+        margin-top: -24px;
+    }
+
+    .section-title {
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+
+    .overview-grid {
+        gap: 12px;
+    }
+
+    .overview-card {
+        padding: 16px 12px;
+        border-radius: 10px;
+    }
+
+    .overview-icon {
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+
+    .overview-card h3 {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .overview-card p {
+        font-size: 12px;
+    }
+
+    .description-content {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .description-content p {
+        margin-bottom: 12px;
+    }
+
+    .learning-grid {
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .learning-item {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .learning-number {
+        font-size: 26px;
+        top: 8px;
+        right: 12px;
+    }
+
+    .learning-item h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .learning-item p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .documents-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        margin-top: 16px !important;
+    }
+
+    .section-subtitle {
+        font-size: 12px;
+        margin-bottom: 16px;
+        line-height: 1.45;
+    }
+
+    .cta-section h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .cta-section p {
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+
+    .cta-button {
+        font-size: 13px;
+        padding: 10px 18px;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-hero {
+        padding: 74px 0 40px;
+    }
+
+    .formation-title {
+        font-size: 24px;
+    }
+
+    .formation-tagline {
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .description-content {
+        font-size: 11px;
+    }
+
+    .learning-item h3 {
+        font-size: 13px;
+    }
+
+    .learning-item p {
+        font-size: 10px;
+    }
+
+    .cta-section h2 {
+        font-size: 19px;
+    }
+
+    .cta-section p {
+        font-size: 11px;
+    }
+
+    .cta-button {
+        font-size: 12px;
+        padding: 8px 14px;
     }
 }
