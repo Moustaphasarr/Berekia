@@ -264,6 +264,42 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Scroll reveal (formation pages) */
+.fd-reveal {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition-delay: var(--fd-delay, 0s);
+}
+
+.fd-reveal-up {
+    transform: translate3d(0, 28px, 0);
+}
+
+.fd-reveal-left {
+    transform: translate3d(-28px, 0, 0);
+}
+
+.fd-reveal-right {
+    transform: translate3d(28px, 0, 0);
+}
+
+.fd-reveal-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fd-reveal,
+    .fd-reveal-up,
+    .fd-reveal-left,
+    .fd-reveal-right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .overview-grid {

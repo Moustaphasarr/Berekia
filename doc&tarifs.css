@@ -419,6 +419,10 @@ body {
     opacity: 0.8;
 }
 
+.footer-bottom p {
+    margin: 10px;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .documents-grid {
