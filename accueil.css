@@ -127,6 +127,48 @@ body {
     color: var(--text-dark);
 }
 
+.hero-typed-line {
+    min-height: 120px;
+    display: block;
+    text-align: left;
+}
+
+#hero-typed-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    font-size: clamp(18px, 2.1vw, 22px);
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: left;
+}
+
+.typed-line {
+    line-height: 1.25;
+    width: 100%;
+    text-align: left;
+}
+
+.typed-line.is-typing::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 3px;
+    color: var(--secondary-color);
+    animation: hero-caret-blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes hero-caret-blink {
+    0%,
+    49% {
+        opacity: 1;
+    }
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
 .hero-buttons {
     display: flex;
     gap: 20px;

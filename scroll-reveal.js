@@ -2,6 +2,90 @@ document.documentElement.classList.add("sr-enabled");
 
 document.addEventListener("DOMContentLoaded", function () {
     var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function parseStatText(rawText) {
+        var match = rawText.trim().match(/^([^\d]*)(\d+)(.*)$/);
+        if (!match) return null;
+        return {
+            prefix: match[1],
+            value: parseInt(match[2], 10),
+            suffix: match[3]
+        };
+    }
+
+    function animateStatValue(node, stat) {
+        var duration = 2000;
+        var startTime = null;
+
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var elapsed = timestamp - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = Math.round(stat.value * eased);
+
+            node.textContent = stat.prefix + current + stat.suffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            } else {
+                node.textContent = stat.prefix + stat.value + stat.suffix;
+            }
+        }
+
+        requestAnimationFrame(step);
+    }
+
+    function setupStatCounters() {
+        var statNodes = document.querySelectorAll(".stat-number");
+        if (!statNodes.length) return;
+
+        var stats = [];
+        statNodes.forEach(function (node) {
+            var parsed = parseStatText(node.textContent);
+            if (!parsed) return;
+            stats.push({ node: node, stat: parsed });
+        });
+
+        if (!stats.length) return;
+
+        if (reducedMotion) {
+            stats.forEach(function (item) {
+                item.node.textContent = item.stat.prefix + item.stat.value + item.stat.suffix;
+            });
+            return;
+        }
+
+        var statObserver = new IntersectionObserver(function (entries, obs) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                var node = entry.target;
+                if (node.dataset.counted === "true") {
+                    obs.unobserve(node);
+                    return;
+                }
+
+                var stat = parseStatText(node.dataset.statTarget || node.textContent);
+                if (stat) {
+                    animateStatValue(node, stat);
+                    node.dataset.counted = "true";
+                }
+                obs.unobserve(node);
+            });
+        }, {
+            threshold: 0.45,
+            rootMargin: "0px 0px -6% 0px"
+        });
+
+        stats.forEach(function (item) {
+            item.node.dataset.statTarget = item.node.textContent.trim();
+            item.node.textContent = item.stat.prefix + "0" + item.stat.suffix;
+            statObserver.observe(item.node);
+        });
+    }
+
+    setupStatCounters();
+
     if (reducedMotion) return;
 
     function addReveal(selector, direction, staggerStep) {
