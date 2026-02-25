@@ -135,6 +135,8 @@ document.addEventListener("DOMContentLoaded", function () {
         addReveal(".section-title", "reveal-up");
         addReveal(".testimonials-grid .testimonial-card", "reveal-up", 90);
         addReveal(".projects-grid .project-card", "reveal-up", 90);
+        addReveal(".jury-section .jury-highlight", "reveal-up", 100);
+        addReveal(".podcast-section .podcast-card", "reveal-up");
         addReveal(".stats-grid .stat-item", "reveal-up", 70);
     }
 

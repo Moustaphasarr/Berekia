@@ -49,7 +49,7 @@ body {
 }
 
 .logo-img {
-    height: 75px;
+    height: 45px;
     width: auto;
     object-fit: contain;
 }
@@ -1044,7 +1044,7 @@ body {
 }
 
 .logo-img {
-    height: 50px;
+    height: 40px;
 }
 }
 
@@ -1128,6 +1128,6 @@ body {
     margin-left: 0;
     }
     .logo-img {
-    height: 50px;
+    height: 40px;
 }
 }
